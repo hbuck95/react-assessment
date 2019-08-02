@@ -7,14 +7,6 @@ import LoginForm from './LoginForm';
 import UserList from './UserList';
 
 export default class RouterHome extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            activeUser: undefined
-        };
-    }
-
     render() {
         return (
             <div>

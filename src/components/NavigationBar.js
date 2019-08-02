@@ -42,7 +42,7 @@ export default class NavigationBar extends Component {
                                 <Link to="/login" className="nlink">Login</Link>
                             </NavItem>
                             <NavItem>
-                                <Link to="/viewUsers" className="nlink">View Users</Link>
+                                <Link id="viewUsers" to="/viewUsers" className="nlink">View Users</Link>
                             </NavItem>
                         </Nav>
                     </Collapse>
