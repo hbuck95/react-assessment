@@ -24,6 +24,9 @@ export default class UserList extends Component {
     render() {
         return (
             <div id="userList">
+                <br/>
+                <h2>List of users:</h2>
+                <br/>
                 {this.state.data.map((user) => (<User key={user._id} _id={user._id} username={user.username} />))}
             </div>
         );
