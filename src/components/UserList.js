@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import User from './';
+import User from './User';
 
 export default class UserList extends Component {
     constructor(props) {
@@ -18,16 +18,15 @@ export default class UserList extends Component {
     getUsers = () => {
         axios.get("http://localhost:5000/user/all").then(users => {
             this.setState({ data: users.data.reverse() });
-            console.log(users.data.reverse());
         }).catch(err => console.log(err));
     };
 
-
     render() {
         return (
-            <div id="userList">           
-                {this.state.data.reverse().map((user) => (<User key={user._id} _id={user._id} username={user.username}/>))};
-        </div>
+            <div id="userList">
+                {this.state.data.map((user) => (<User key={user._id} _id={user._id} username={user.username} />))}
+            </div>
         );
     }
+
 }
