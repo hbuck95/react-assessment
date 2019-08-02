@@ -23,6 +23,14 @@
   color: #61dafb;
 }
 
+.nlink {
+  color: #FFF;
+  padding-right: 30px;
+}
+.nlink:hover {
+   color: rgb(81, 169, 252)
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
