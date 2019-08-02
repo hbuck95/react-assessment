@@ -10,7 +10,7 @@ import {
 
 import 'bootstrap/dist/css/bootstrap.css'
 
-export default class Registerform extends Component {
+export default class RegisterForm extends Component {
     constructor() {
         super();
         this.state = {
