@@ -7,7 +7,7 @@ import LoginForm from '../components/LoginForm';
 
 configure({adapter: new Adapter()});
 
-it('Loginform renders', () => {
+it('LoginForm renders', () => {
     const compJson = renderer.create(<LoginForm/>).toJSON();
     expect(compJson).toMatchSnapshot();
   });
