@@ -39,6 +39,10 @@
   padding-bottom: 15px;
 }
 
+.errorField {
+  color: red;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
