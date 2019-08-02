@@ -5,9 +5,9 @@ import { configure } from 'enzyme';
 
 import RegisterForm from '../components/RegisterForm';
 
-configure({adapter: new Adapter()});
+configure({ adapter: new Adapter() });
 
 it('RegisterForm renders', () => {
-    const compJson = renderer.create(<RegisterForm/>).toJSON();
-    expect(compJson).toMatchSnapshot();
-  });
+  const compJson = renderer.create(<RegisterForm />).toJSON();
+  expect(compJson).toMatchSnapshot();
+});

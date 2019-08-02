@@ -5,9 +5,9 @@ import { configure } from 'enzyme';
 
 import User from '../components/User';
 
-configure({adapter: new Adapter()});
+configure({ adapter: new Adapter() });
 
 it('User renders', () => {
-    const compJson = renderer.create(<User/>).toJSON();
-    expect(compJson).toMatchSnapshot();
-  });
+  const compJson = renderer.create(<User />).toJSON();
+  expect(compJson).toMatchSnapshot();
+});
