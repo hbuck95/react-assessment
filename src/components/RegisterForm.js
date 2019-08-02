@@ -19,6 +19,17 @@ export default class RegisterForm extends Component {
         };
     }
 
+    formatJSON = (json) => {
+        let string = "";
+
+        for (var key in json) {
+            string += json[key] + "\n\n";
+        }
+
+        console.log(string);
+        return string;
+    }
+
     handleSubmit = (e) => {
         e.preventDefault();
 
@@ -110,17 +121,14 @@ export default class RegisterForm extends Component {
                         <Row>
                             <Col />
                             <Col />
-                            <Col><Button id="userSubmit" color={this.state.registerStatus === null ? "primary" : this.state.registerStatus ? "success" : "danger" }>Create Account</Button></Col>
+                            <Col><Button id="userSubmit" color={this.state.registerStatus === null ? "primary" : this.state.registerStatus ? "success" : "danger"}>Create Account</Button></Col>
                             <Col />
                             <Col />
                         </Row>
                         <br />
                         <Row>
                             <Col />
-                            <Col />
-                            <Col />
-                            <Col className="errorField"><h5>{this.state.errors === null ? "" : JSON.stringify(this.state.errors)}</h5></Col>
-                            <Col />
+                            <Col className="errorField"><h5>{this.state.errors === null ? "" : this.formatJSON(this.state.errors)}</h5></Col>
                             <Col />
                             <Col />
                         </Row>
