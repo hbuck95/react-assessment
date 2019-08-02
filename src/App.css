@@ -31,6 +31,14 @@
    color: rgb(81, 169, 252)
 }
 
+.formHead {
+  padding-bottom: 30px;
+}
+
+.formField {
+  padding-bottom: 15px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

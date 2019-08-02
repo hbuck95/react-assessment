@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import NavigationBar from './NavigationBar';
+import RegisterForm from './RegisterForm';
 
 export default class RouterHome extends Component {
     constructor(props) {
@@ -19,7 +20,7 @@ export default class RouterHome extends Component {
                     <NavigationBar/>
                     <Route exact path="/" render={() => <div><br/><p>Please register or login to your account.</p></div>} />
                     <Route path="/login" render={() => <p>Login</p>} />
-                    <Route path="/register" render={() => <p>Reigster</p>} />
+                    <Route path="/register" render={() => <RegisterForm/>} />
                     <Route path="/viewUsers" render={() => <p>View Users</p>} />
                 </Router>
             </div>
