@@ -1,8 +1,12 @@
+//Libraries
 import React, {Component} from 'react';
 
+//CSS
 import './App.css';
-import RouterHome from './components/RouterHome';
+import 'bootstrap/dist/css/bootstrap.css';
 
+//Components
+import RouterHome from './components/RouterHome';
 
 export default class App extends Component {
   render() {
