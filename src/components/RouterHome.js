@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavigationBar from './NavigationBar';
 import RegisterForm from './RegisterForm';
 import LoginForm from './LoginForm';
+import UserList from './UserList';
 
 export default class RouterHome extends Component {
     constructor(props) {
@@ -22,7 +23,7 @@ export default class RouterHome extends Component {
                     <Route exact path="/" render={() => <div><br/><p>Please register or login to your account.</p></div>} />
                     <Route path="/login" render={() => <LoginForm/>} />
                     <Route path="/register" render={() => <RegisterForm/>} />
-                    <Route path="/viewUsers" render={() => <p>View Users</p>} />
+                    <Route path="/viewUsers" render={() => <UserList/>} />
                 </Router>
             </div>
         );
