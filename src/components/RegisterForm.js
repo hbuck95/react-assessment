@@ -14,8 +14,8 @@ export default class Registerform extends Component {
     constructor() {
         super();
         this.state = {
-            registrationSuccess: undefined,
-            errors: null
+            errors: null,
+            registerStatus: null
         };
     }
 
@@ -42,11 +42,11 @@ export default class Registerform extends Component {
                 let data = response.data;
                 if (data._id === undefined) {
                     window.alert("There were errors when creating your account.");
-                    this.setState({ errors: data });
+                    this.setState({ errors: data, registerStatus: false });
                 } else {
                     window.alert("Account created successfully!");
                     document.getElementById("registerForm").reset();
-                    this.setState({ errors: null });
+                    this.setState({ errors: null, registerStatus: true });
                 }
             })
             .catch(err => {
@@ -110,7 +110,7 @@ export default class Registerform extends Component {
                         <Row>
                             <Col />
                             <Col />
-                            <Col><Button id="userSubmit" color="success">Create Account</Button></Col>
+                            <Col><Button id="userSubmit" color={this.state.registerStatus === null ? "primary" : this.state.registerStatus ? "success" : "danger" }>Create Account</Button></Col>
                             <Col />
                             <Col />
                         </Row>
